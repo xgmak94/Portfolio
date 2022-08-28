@@ -2,6 +2,21 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-}
+  images: {
+    domains: ['lh3.googleusercontent.com'],
+  },
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.(jpg|png|gif|svg|pdf)$/,
+      use: {
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]',
+        },
+      },
+    });
+    return config;
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
