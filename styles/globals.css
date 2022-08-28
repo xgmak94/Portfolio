@@ -25,3 +25,20 @@ a {
     background: rgb(186, 161, 161);
   }
 }
+
+
+#navbar {
+  background-color: rgb(222, 196, 220);
+}
+
+#about-display {
+  resize: none;
+}
+
+#project-icon {
+  cursor: pointer;
+}
+
+#about-container {
+  background-color: #383737;
+}

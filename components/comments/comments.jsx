@@ -60,7 +60,7 @@ function Comments() {
       email: '',
       comment: '',
     });
-  }
+  };
 
   return (
     <>

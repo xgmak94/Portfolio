@@ -6,14 +6,16 @@ import Comments from '../../components/comments/comments';
 function Contact() {
   return (
     <>
-      <div className="container p-3 m-5 text-secondary border border-primary">
+      <div className="container p-3 text-secondary border border-primary">
         <div className="row">
           <h1>Contact</h1>
         </div>
-        <div className="row">
+        <div className="row m-3">
           <div className="col m-3 border">
-            <AiOutlineMail size={50} />
-            <div>xgmak94@gmail.com</div>
+            <a href="mailto:xgmak94@gmail.com">
+              <AiOutlineMail size={50} />
+              <div>xgmak94@gmail.com</div>
+            </a>
           </div>
           <div className="col m-3 border">
             <a href="https://github.com/xgmak94">
@@ -29,7 +31,7 @@ function Contact() {
           </div>
         </div>
       </div>
-      <div className="container text-secondary">
+      <div className="container text-secondary p-3">
         <div id="comments" className="row text-center">
           <h1>Leave a comment</h1>
           <Comments />
