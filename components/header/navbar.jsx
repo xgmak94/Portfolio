@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-function navbar() {
+function Navbar() {
   return (
     <nav id="navbar" className="navbar navbar-expand-lg mb-3">
       <div className="container-fluid">
@@ -53,4 +53,4 @@ function navbar() {
   );
 }
 
-export default navbar;
+export default Navbar;
