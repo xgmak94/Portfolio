@@ -1,3 +1,4 @@
+import config from '../../config.js';
 import react, { useState } from 'react';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
@@ -7,15 +8,7 @@ import { getAnalytics } from 'firebase/analytics';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
-const firebaseConfig = {
-  apiKey: 'AIzaSyCAuFOmS36eK1G8E43zxIu41850_Yw20lg',
-  authDomain: 'instant-basis-297223.firebaseapp.com',
-  projectId: 'instant-basis-297223',
-  storageBucket: 'instant-basis-297223.appspot.com',
-  messagingSenderId: '130068858582',
-  appId: '1:130068858582:web:98ee2c68fb7736585f6b77',
-  measurementId: 'G-S3TH5MFMMG',
-};
+const firebaseConfig = config;
 
 const app = firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
@@ -67,7 +60,7 @@ function Comments() {
       <form className="p-5" onSubmit={submitComment}>
         <div className="text-start form-floating m-3">
           <input
-          type="email"
+          type="text"
           className="form-control"
             id="username"
             value={info.name}

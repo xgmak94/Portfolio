@@ -17,7 +17,7 @@ function About() {
   return (
     <div className="container">
       <div className="text-center m-3">
-        <Image src="/assets/LuckyLarrys.jpg" alt="Portrait" width="200" height="200" />
+        <Image src="" alt="Portrait" width="200" height="200" />
       </div>
       <div id="about-container" className="container m-3 p-3 rounded-5">
         <div className="m-3">
