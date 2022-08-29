@@ -30,7 +30,7 @@ function About() {
         </div>
         <div className="m-3">
           <div>&gt; Gary.education</div>
-          <div>&gt;&gt; BS from UCSB</div>
+          <div>&gt;&gt; BS from University of California, Santa Barbara</div>
         </div>
         <div className="m-3">
           <div>&gt; Gary.major</div>

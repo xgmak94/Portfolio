@@ -65,23 +65,20 @@ function Comments() {
   return (
     <>
       <form className="p-5" onSubmit={submitComment}>
-        <div className="text-start">
-          <label htmlFor="username" className="form-label">
-            Name
-          </label>
+        <div className="text-start form-floating m-3">
           <input
+          type="email"
+          className="form-control"
             id="username"
             value={info.name}
-            className="form-control"
             onChange={(e) => setInfo({ ...info, name: e.target.value })}
             required
           />
-          <div className="valid-feedback">Nice</div>
-        </div>
-        <div className="text-start">
-          <label htmlFor="email" className="form-label">
-            Email
+          <label htmlFor="username">
+            Name
           </label>
+        </div>
+        <div className="text-start form-floating m-3">
           <input
             id="email"
             value={info.email}
@@ -89,18 +86,22 @@ function Comments() {
             onChange={(e) => setInfo({ ...info, email: e.target.value })}
             required
           />
-        </div>
-        <div className="text-start">
-          <label htmlFor="comment" className="form-label" required>
-            Comment
+          <label htmlFor="email" className="form-label">
+            Email
           </label>
+        </div>
+        <div className="text-start form-floating m-3">
           <textarea
             id="comment"
             className="form-control"
             value={info.comment}
             onChange={(e) => setInfo({ ...info, comment: e.target.value })}
+            rows={5}
             required
           />
+          <label htmlFor="comment" className="form-label" required>
+            Comment
+          </label>
         </div>
         <div className="container p-3">
           <div className="row">

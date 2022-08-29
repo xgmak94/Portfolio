@@ -42,3 +42,12 @@ a {
 #about-container {
   background-color: #383737;
 }
+
+#comment {
+  resize: none;
+  height: 100%;
+}
+
+.card-image {
+  cursor: pointer;
+}

@@ -10,7 +10,7 @@ let projects = [
     name: 'Discord Bot',
   },
   {
-    name: 'System Design',
+    name: 'Atelier',
   },
 ];
 
@@ -22,7 +22,7 @@ function Projects() {
           {projects.map((project) => {
             let joined = project.name.split(' ').join('');
             return (
-              <Link key={project.name} href={`/projects/${joined}`} >
+              <Link key={project.name} href={`/projects/${joined}`}>
                 <button className="col m-3 btn">
                   {project.name}
                   <div key={project.name} id="projects-grid-item">
