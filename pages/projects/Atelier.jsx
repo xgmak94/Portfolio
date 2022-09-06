@@ -1,12 +1,16 @@
 import React from 'react';
 import Image from 'next/image';
+import { AiFillGithub } from 'react-icons/ai';
 
 function Atelier() {
   return (
     <>
       <div className="container mb-3">
         <h1>Atelier</h1>
-        <a href="http://github.com/xgmak94/discordBot">Github</a>
+        <a href="http://github.com/xgmak94/Atelier">
+          <AiFillGithub size={50} />
+          Github
+        </a>
         <div className="row">
           <div className="col m-3">
             <h2>Overview</h2>
@@ -24,9 +28,7 @@ function Atelier() {
       <div className="container mb-3">
         <div className="row">
           <h2>Tools</h2>
-          <div>PostgreSQL, Express, Node.js, JavaScript, NGINX</div>
-          <div>
-            <b>Testing/Deployment: </b>AWS, K6, Loader.io, New Relic
+          <div>PostgreSQL, Express, Node.js, JavaScript, NGINX, AWS, K6, Loader.io, New Relic
           </div>
         </div>
       </div>

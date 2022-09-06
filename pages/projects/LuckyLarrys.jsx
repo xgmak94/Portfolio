@@ -1,12 +1,16 @@
 import React from 'react';
 import Image from 'next/image';
+import { AiFillGithub } from 'react-icons/ai';
 
 function LuckyLarrys() {
   return (
     <>
       <div className="container mb-3">
         <h1>Lucky Larrys</h1>
-        <a href="https://github.com/xgmak94/LUCKY-LARRY-S">Github</a>
+        <a href="https://github.com/xgmak94/LUCKY-LARRY-S">
+          <AiFillGithub size={50} />
+          Github
+        </a>
         <div className="row">
           <div className="col m-3">
             <h2>Overview</h2>
@@ -18,7 +22,12 @@ function LuckyLarrys() {
             </div>
           </div>
           <div className="col m-3">
-            <Image src="/assets/LuckyLarrys/Overview.jpg" alt="overview" width="1024" height="768" />
+            <Image
+              src="/assets/LuckyLarrys/Overview.jpg"
+              alt="overview"
+              width="1024"
+              height="768"
+            />
           </div>
         </div>
       </div>

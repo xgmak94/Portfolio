@@ -1,12 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
+import { AiFillGithub } from 'react-icons/ai';
 
 function DiscordBot() {
   return (
     <>
       <div className="container mb-3">
         <h1>Discord Bot</h1>
-        <a href="http://github.com/xgmak94/discordBot">Github</a>
+        <a href="http://github.com/xgmak94/discordBot"><AiFillGithub size={50} />Github</a>
         <div className="row">
           <div className="col m-3">
             <h2>Overview</h2>
