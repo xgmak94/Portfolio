@@ -7,10 +7,12 @@ function LuckyLarrys() {
     <>
       <div className="container mb-3">
         <h1>Lucky Larrys</h1>
-        <a href="https://github.com/xgmak94/LUCKY-LARRY-S">
-          <AiFillGithub size={50} />
-          Github
-        </a>
+        <button className="btn">
+          <a href="https://github.com/xgmak94/LUCKY-LARRY-S">
+            <AiFillGithub size={50} />
+            Github
+          </a>
+        </button>
         <div className="row">
           <div className="col m-3">
             <h2>Overview</h2>
@@ -25,8 +27,10 @@ function LuckyLarrys() {
             <Image
               src="/assets/LuckyLarrys/Overview.jpg"
               alt="overview"
-              width="1024"
-              height="768"
+              width="100%"
+              height="100%"
+              layout="responsive"
+              objectFit="contain"
             />
           </div>
         </div>

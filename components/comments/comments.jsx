@@ -26,9 +26,10 @@ if (app.name && typeof window !== 'undefined') {
   analytics = getAnalytics(app);
 }
 
-
 function Comments() {
   const messagesRef = firestore.collection('comments');
+
+  const [submitted, setSubmitted] = useState(false);
 
   const [info, setInfo] = useState({
     name: '',
@@ -51,6 +52,14 @@ function Comments() {
       email: '',
       comment: '',
     });
+
+    setSubmitted((prev) => {
+      setSubmitted(true);
+      setTimeout(() => {
+        setSubmitted(false);
+      }, 5000);
+    });
+
   };
 
   const reset = (e) => {
@@ -65,19 +74,22 @@ function Comments() {
 
   return (
     <>
+      {submitted && (
+        <div className="alert alert-success" role="alert">
+          Thanks for the comment!
+        </div>
+      )}
       <form className="p-5" onSubmit={submitComment}>
         <div className="text-start form-floating m-3">
           <input
-          type="text"
-          className="form-control"
+            type="text"
+            className="form-control"
             id="username"
             value={info.name}
             onChange={(e) => setInfo({ ...info, name: e.target.value })}
             required
           />
-          <label htmlFor="username">
-            Name
-          </label>
+          <label htmlFor="username">Name</label>
         </div>
         <div className="text-start form-floating m-3">
           <input

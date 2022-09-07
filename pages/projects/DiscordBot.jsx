@@ -7,10 +7,12 @@ function DiscordBot() {
     <>
       <div className="container mb-3">
         <h1>Discord Bot</h1>
-        <a href="http://github.com/xgmak94/discordBot">
-          <AiFillGithub size={50} />
-          Github
-        </a>
+        <button className="btn">
+          <a href="http://github.com/xgmak94/discordBot">
+            <AiFillGithub size={50} />
+            Github
+          </a>
+        </button>
         <div className="row">
           <div className="col m-3">
             <h2>Overview</h2>
@@ -22,7 +24,14 @@ function DiscordBot() {
             </div>
           </div>
           <div className="col m-3">
-            <Image src="/assets/DiscordBot/Overview.jpg" alt="overview" width="1024" height="768" />
+            <Image
+              src="/assets/DiscordBot/Overview.jpg"
+              alt="overview"
+              width="100%"
+              height="100%"
+              layout="responsive"
+              objectFit="contain"
+            />
           </div>
         </div>
       </div>

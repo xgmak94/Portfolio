@@ -17,8 +17,8 @@ export default function Home() {
             <Link href="/about">Learn more</Link>
           </button>
         </p>
-        </div>
-        <Projects />
+      </div>
+      <Projects />
     </>
   );
 }

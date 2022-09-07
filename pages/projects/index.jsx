@@ -24,7 +24,7 @@ function Projects() {
             return (
               <Link key={project.name} href={`/projects/${joined}`}>
                 <button className="col m-3 btn">
-                  {project.name}
+                  <h3>{project.name}</h3>
                   <div key={project.name} id="projects-grid-item">
                     <div>
                       <Image
