@@ -17,7 +17,13 @@ function About() {
   return (
     <div className="container">
       <div className="text-center m-3">
-        <Image src="" alt="Portrait" width="200" height="200" />
+        <Image
+          src="/Portrait.jpg"
+          alt="Portrait"
+          className="rounded-circle"
+          width="300"
+          height="300"
+        />
       </div>
       <div id="about-container" className="container m-3 p-3 rounded-5">
         <div className="m-3">
