@@ -14,7 +14,11 @@ export default function Navbar() {
           <NavItem link="/projects" text="projects" />
           <NavItem link="/about" text="about" />
           <NavItem link="/contact" text="contact" />
-          <NavItem link="/Gary%20Mak%20resume.pdf" text="resume" />
+          <a href="/Gary%20Mak%20resume.pdf">
+            <button className="hover:bg-gray-300 dark:hover:bg-gray-600 rounded-xl text-lg p-2 capitalize">
+              Resume
+            </button>
+          </a>
           <ModeToggle />
         </div>
       </div>
