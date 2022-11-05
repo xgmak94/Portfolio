@@ -1,31 +1,14 @@
-import React, { useState } from 'react';
-import Image from 'next/image';
+import React from 'react';
 
-function About() {
-  const [display, setDisplay] = useState('');
-  const [nameDisplay, setnameDisplay] = useState('');
-  const changeDisplay = (e) => {
-    setDisplay((prev) => {
-      let obj = {
-        ...prev,
-      };
-      obj[e.target.getAttribute('field')] = e.target.getAttribute('data');
-      return obj;
-    });
-  };
+import Portrait from '../../components/portrait/Portrait';
 
+export default function About() {
   return (
-    <div className="container">
-      <div className="text-center m-3">
-        <Image
-          src="/Portrait.jpg"
-          alt="Portrait"
-          className="rounded-circle"
-          width="300"
-          height="300"
-        />
+    <div className="container text-black dark:text-white">
+      <div className="container my-3 text-center">
+        <Portrait />
       </div>
-      <div id="about-container" className="container m-3 p-3 rounded-5">
+      <div className="m-3 border border-white dark:border-black rounded-xl">
         <div className="m-3">
           <div>&gt; Gary.location</div>
           <div>&gt;&gt; Los Angeles, California</div>
@@ -50,5 +33,3 @@ function About() {
     </div>
   );
 }
-
-export default About;
