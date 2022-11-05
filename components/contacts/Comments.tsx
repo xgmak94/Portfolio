@@ -46,15 +46,22 @@ export default function Comments() {
           <form className="p-5" onSubmit={submitComment}>
             <div className="flex justify-between container p-3 gap-3">
               <label htmlFor="username">Name</label>
-              <input type="text" id="username" ref={nameRef} required />
+              <input type="text" id="username" ref={nameRef} className="rounded-lg" required />
             </div>
             <div className="flex justify-between container p-3 gap-3">
               <label htmlFor="email">Email</label>
-              <input id="email" ref={emailRef} required />
+              <input id="email" ref={emailRef} className="rounded-lg" required />
             </div>
             <div className="flex justify-between container p-3 gap-3">
               <label htmlFor="comment">Comment</label>
-              <textarea id="comment" ref={commentRef} cols={25} rows={5} required />
+              <textarea
+                id="comment"
+                ref={commentRef}
+                className="rounded-lg"
+                cols={23}
+                rows={6}
+                required
+              />
             </div>
             <button
               className="self-center text-4xl p-3 border rounded-xl text-black dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600"

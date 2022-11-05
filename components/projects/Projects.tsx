@@ -3,7 +3,7 @@ import Card from './Card';
 
 export default function Projects() {
   return (
-    <div className="container grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 text-black dark:text-white">
+    <div className="self-center container grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 text-black dark:text-white">
       <Card
         title="Lucky Larrys"
         description="A web application allowing users to play and simulate the outcomes of various casino games."

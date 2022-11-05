@@ -1,48 +1,38 @@
 import React from 'react';
-import Link from 'next/link';
-import { MdOutlineLightMode, MdOutlineModeNight } from 'react-icons/md';
+import { useRouter } from 'next/router';
 
-import { useTheme } from 'next-themes';
+import NavItem from './NavItem';
+import ModeToggle from './ModeToggle';
+import { motion } from 'framer-motion';
 
 export default function Navbar() {
-  const { theme, setTheme } = useTheme();
+  const router = useRouter();
 
   return (
-    <nav className="p-3 text-black dark:text-white bg-gray-400 dark:bg-gray-700 border-b border-black dark:border-white">
+    <motion.nav
+      className="p-3 text-black dark:text-white bg-gray-400 dark:bg-gray-700 border-b border-black dark:border-white"
+      initial={{
+        y: -500,
+      }}
+      animate={{
+        y: 0,
+      }}
+      transition={{
+        duration: 2,
+      }}
+    >
       <div className="flex flex-row justify-between items-center">
         <div className="container flex justify-start gap-3">
-          <Link href="/">
-            <button className="hover:bg-gray-300 dark:hover:bg-gray-600 rounded-xl text-lg p-2">
-              Home
-            </button>
-          </Link>
+          <NavItem link="/" text="home" />
         </div>
         <div className="container flex justify-end gap-3">
-          <Link href="/projects">
-            <button className="hover:bg-gray-300 dark:hover:bg-gray-600 rounded-xl text-lg p-2">
-              Projects
-            </button>
-          </Link>
-          <Link href="/about">
-            <button className="hover:bg-gray-300 dark:hover:bg-gray-600 rounded-xl text-lg p-2">
-              About
-            </button>
-          </Link>
-          <Link href="/contact">
-            <button className="hover:bg-gray-300 dark:hover:bg-gray-600 rounded-xl text-lg p-2">
-              Contact
-            </button>
-          </Link>
-          <Link href="/resume.pdf">
-            <button className="hover:bg-gray-300 dark:hover:bg-gray-600 rounded-xl text-lg p-2">
-              Resume
-            </button>
-          </Link>
-          <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
-            {theme === 'light' ? <MdOutlineLightMode /> : <MdOutlineModeNight />}
-          </button>
+          <NavItem link={router.pathname === '/' ? '#projects' : '/projects'} text="projects" />
+          <NavItem link={router.pathname === '/' ? '#about' : '/about'} text="about" />
+          <NavItem link={router.pathname === '/' ? '#contact' : '/contact'} text="contact" />
+          <NavItem link="/resume.pdf" text="resume" />
+          <ModeToggle />
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 }
