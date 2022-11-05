@@ -33,9 +33,11 @@ export default function Navbar() {
               Contact
             </button>
           </Link>
-          <button className="hover:bg-gray-300 dark:hover:bg-gray-600 rounded-xl text-lg p-2">
-            Resume
-          </button>
+          <Link href="/resume.pdf">
+            <button className="hover:bg-gray-300 dark:hover:bg-gray-600 rounded-xl text-lg p-2">
+              Resume
+            </button>
+          </Link>
           <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
             {theme === 'light' ? <MdOutlineLightMode /> : <MdOutlineModeNight />}
           </button>
