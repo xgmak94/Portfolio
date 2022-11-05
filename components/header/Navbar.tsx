@@ -14,7 +14,7 @@ export default function Navbar() {
           <NavItem link="/projects" text="projects" />
           <NavItem link="/about" text="about" />
           <NavItem link="/contact" text="contact" />
-          <NavItem link="/resume.pdf" text="resume" />
+          <NavItem link="/Gary%20Mak%20resume.pdf" text="resume" />
           <ModeToggle />
         </div>
       </div>
