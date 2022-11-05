@@ -3,6 +3,8 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
 import 'firebase/compat/auth';
 
+import { motion } from 'framer-motion';
+
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
   authDomain: process.env.NEXT_PUBLIC_FIREBASE_API_AUTH_DOMAIN,
@@ -46,15 +48,29 @@ export default function Comments() {
           <form className="p-5" onSubmit={submitComment}>
             <div className="flex justify-between container p-3 gap-3">
               <label htmlFor="username">Name</label>
-              <input type="text" id="username" ref={nameRef} className="rounded-lg" required />
+              <motion.input
+                whileFocus={{ scale: 1.1 }}
+                type="text"
+                id="username"
+                ref={nameRef}
+                className="rounded-lg"
+                required
+              />
             </div>
             <div className="flex justify-between container p-3 gap-3">
               <label htmlFor="email">Email</label>
-              <input id="email" ref={emailRef} className="rounded-lg" required />
+              <motion.input
+                whileFocus={{ scale: 1.1 }}
+                id="email"
+                ref={emailRef}
+                className="rounded-lg"
+                required
+              />
             </div>
             <div className="flex justify-between container p-3 gap-3">
               <label htmlFor="comment">Comment</label>
-              <textarea
+              <motion.textarea
+                whileFocus={{ scale: 1.1 }}
                 id="comment"
                 ref={commentRef}
                 className="rounded-lg"
@@ -63,12 +79,13 @@ export default function Comments() {
                 required
               />
             </div>
-            <button
+            <motion.button
               className="self-center text-4xl p-3 border rounded-xl text-black dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600"
+              whileHover={{ scale: 1.1 }}
               type="submit"
             >
               Comment
-            </button>
+            </motion.button>
           </form>
         </div>
       )}

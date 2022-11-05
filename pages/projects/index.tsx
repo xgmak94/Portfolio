@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Projects from '../../components/projects/Projects';
 import { motion } from 'framer-motion';
 
@@ -8,10 +8,10 @@ export default function ProjectsPage() {
       <motion.div
         className="flex flex-col text-center justify-center m-5"
         initial={{
-          x: -500,
+          y: 500,
         }}
         animate={{
-          x: 0,
+          y: 0,
         }}
         transition={{
           duration: 2,

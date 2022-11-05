@@ -5,10 +5,7 @@ import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import { motion } from 'framer-motion';
 
 import Portrait from '../components/portrait/Portrait';
-import AboutInfo from '../components/about/AboutInfo';
-
 import Projects from './projects/index';
-import Contact from './contact/index';
 
 export default function Home() {
   const [text, count] = useTypewriter({
@@ -20,21 +17,10 @@ export default function Home() {
 
   return (
     <>
-      <div className="m-3 text-black dark:text-white">
-        <motion.div
-          className="container text-center"
-          initial={{
-            opacity: 0,
-          }}
-          animate={{
-            opacity: 1,
-          }}
-          transition={{
-            duration: 2,
-          }}
-        >
+      <motion.div className="m-3 text-black dark:text-white">
+        <div className="container text-center">
           <Portrait />
-        </motion.div>
+        </div>
         <div className="flex flex-col space-y-8 items-center justify-center text-center overflow-hidden p-3">
           <div className="flex text-4xl">
             <div>{text}</div>
@@ -42,13 +28,8 @@ export default function Home() {
           </div>
         </div>
         <hr className="border-white dark:border-black" />
-      </div>
-      <a id="projects" />
+      </motion.div>
       <Projects />
-      <a id="about" />
-      <AboutInfo />
-      <a id="contact" />
-      <Contact />
     </>
   );
 }
