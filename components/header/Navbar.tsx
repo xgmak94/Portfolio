@@ -3,6 +3,7 @@ import React from 'react';
 import NavItem from './NavItem';
 import ModeToggle from './ModeToggle';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 export default function Navbar() {
   return (
@@ -16,7 +17,12 @@ export default function Navbar() {
           <NavItem link="/about" text="about" />
           <NavItem link="/contact" text="contact" />
           <Link href="/resume.pdf" locale={false} rel="noopener noreferrer">
-            resume
+            <motion.button
+              className="hover:bg-gray-300 dark:hover:bg-gray-600 rounded-xl text-lg p-2 capitalize"
+              whileHover={{ scale: 1.1 }}
+            >
+              resume
+            </motion.button>
           </Link>
           <ModeToggle />
         </div>
