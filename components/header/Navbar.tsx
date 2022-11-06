@@ -15,6 +15,9 @@ export default function Navbar() {
           <NavItem link="/about" text="about" />
           <NavItem link="/contact" text="contact" />
           <NavItem link="/resume" text="resume" />
+          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+            resume
+          </a>
           <ModeToggle />
         </div>
       </div>

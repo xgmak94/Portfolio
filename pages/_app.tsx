@@ -18,7 +18,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <ThemeProvider attribute="class">
         <Navbar />
-        <AnimatePresence exitBeforeEnter>
+        <AnimatePresence mode="wait">
           <motion.div
             key={router.route}
             initial="initialState"
