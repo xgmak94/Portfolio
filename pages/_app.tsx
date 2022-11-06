@@ -20,6 +20,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <Navbar />
         <AnimatePresence mode="wait">
           <motion.div
+            className="text-black dark:text-white"
             key={router.route}
             initial="initialState"
             animate="animateState"

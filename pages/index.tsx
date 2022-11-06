@@ -17,7 +17,7 @@ export default function Home() {
 
   return (
     <>
-      <motion.div className="m-3 text-black dark:text-white">
+      <div className="m-3">
         <div className="container text-center">
           <Portrait />
         </div>
@@ -28,7 +28,7 @@ export default function Home() {
           </div>
         </div>
         <hr className="border-white dark:border-black" />
-      </motion.div>
+      </div>
       <Projects />
     </>
   );

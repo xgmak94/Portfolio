@@ -13,9 +13,9 @@ export default function Card({ title, description }: pageProps) {
   const joined = title.split(' ').join('');
 
   return (
-    <div className="flex flex-col text-center m-2 rounded-3xl border border-white dark:border-black">
+    <div className="flex flex-col text-center m-3 rounded-3xl border border-white dark:border-black">
       <Link href={`/projects/${joined}`}>
-        <motion.div className="cursor-pointer" whileHover={{ scale: 1.1 }}>
+        <motion.div className="cursor-pointer m-3" whileHover={{ scale: 1.05 }}>
           <Image
             className="rounded-3xl"
             src={`/assets/${joined}.jpg`}
@@ -26,14 +26,13 @@ export default function Card({ title, description }: pageProps) {
           />
         </motion.div>
       </Link>
-      <div className="flex flex-col">
-        <hr className="border-t border-black dark:border-white" />
-        <h5 className="text-xl">{title}</h5>
-        <p className="m-3 text-left text-lg">{description}</p>
+      <div className="flex flex-col border-t border-black dark:border-white">
+        <div className="text-xl">{title}</div>
+        <div className="m-3 text-left text-lg overflow-clip h-40">{description}</div>
         <Link href={`/projects/${joined}`}>
           <motion.button
             className="border m-3 rounded-xl text-lg p-3 hover:bg-gray-300 dark:hover:bg-gray-600 justify-end"
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.05 }}
           >
             Read more
           </motion.button>

@@ -6,10 +6,11 @@ import { motion } from 'framer-motion';
 
 export default function ModeToggle() {
   const { theme, setTheme } = useTheme();
+
   return (
     <motion.button
       whileHover={{ scale: 1.1 }}
-      className="hover:bg-gray-300 dark:hover:bg-gray-600 rounded-xl text-lg p-2"
+      className="hover:bg-gray-300 dark:hover:bg-gray-600 rounded-xl text-xl p-2"
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
     >
       {theme === 'light' ? <MdOutlineLightMode /> : <MdOutlineModeNight />}
