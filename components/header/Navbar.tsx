@@ -2,6 +2,7 @@ import React from 'react';
 
 import NavItem from './NavItem';
 import ModeToggle from './ModeToggle';
+import Link from 'next/link';
 
 export default function Navbar() {
   return (
@@ -14,10 +15,9 @@ export default function Navbar() {
           <NavItem link="/projects" text="projects" />
           <NavItem link="/about" text="about" />
           <NavItem link="/contact" text="contact" />
-          <NavItem link="/resume" text="resume" />
-          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+          <Link href="/resume.pdf" locale={false} rel="noopener noreferrer">
             resume
-          </a>
+          </Link>
           <ModeToggle />
         </div>
       </div>
