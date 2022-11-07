@@ -12,6 +12,7 @@ export default function ModeToggle() {
       whileHover={{ scale: 1.1 }}
       className="hover:bg-gray-300 dark:hover:bg-gray-600 rounded-xl text-xl p-2"
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      aria-label={theme === 'light' ? 'Dark Mode' : 'Light Mode'}
     >
       {theme === 'light' ? <MdOutlineLightMode /> : <MdOutlineModeNight />}
     </motion.button>
