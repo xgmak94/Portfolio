@@ -5,10 +5,8 @@ import Portrait from '../../components/portrait/Portrait';
 
 export default function About() {
   return (
-    <div className="container text-black dark:text-white">
-      <div className="container my-3 text-center">
-        <Portrait />
-      </div>
+    <div className="m-5">
+      <Portrait />
       <AboutInfo />
     </div>
   );

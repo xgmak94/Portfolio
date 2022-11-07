@@ -1,10 +1,8 @@
 import React from 'react';
-import Image from 'next/image';
-import { AiFillGithub } from 'react-icons/ai';
 
 import ProjectPage from '../../components/projects/ProjectPage';
 
-function DiscordBot() {
+export default function DiscordBot() {
   return (
     <>
       <ProjectPage
@@ -25,4 +23,3 @@ function DiscordBot() {
   );
 }
 
-export default DiscordBot;

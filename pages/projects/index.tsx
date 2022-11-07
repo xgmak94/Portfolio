@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Projects from '../../components/projects/Projects';
 import { motion } from 'framer-motion';
 
@@ -17,7 +17,6 @@ export default function ProjectsPage() {
           duration: 2,
         }}
       >
-        <div className="flex justify-start text-4xl m-3">Projects</div>
         <Projects />
       </motion.div>
     </>

@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import Projects from './Projects';
 import ProjectSection from './ProjectSection';
 
 interface projectProps {
@@ -35,8 +34,8 @@ export default function ProjectPage({ name, link, overview, tools, objectives }:
               />
             }
           />
-          <ProjectSection title="tools" text={tools} />
           <ProjectSection title="objectives" text={objectives} />
+          <ProjectSection title="tools" text={tools} />
         </div>
       </div>
     </>

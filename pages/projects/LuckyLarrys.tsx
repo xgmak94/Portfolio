@@ -1,9 +1,8 @@
 import React from 'react';
-import Image from 'next/image';
-import { AiFillGithub } from 'react-icons/ai';
+
 import ProjectPage from '../../components/projects/ProjectPage';
 
-function LuckyLarrys() {
+export default function LuckyLarrys() {
   return (
     <>
       <ProjectPage
@@ -23,5 +22,3 @@ function LuckyLarrys() {
     </>
   );
 }
-
-export default LuckyLarrys;
