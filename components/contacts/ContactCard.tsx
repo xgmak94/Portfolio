@@ -2,13 +2,13 @@ import React from 'react';
 
 import { motion } from 'framer-motion';
 
-interface ContactProps {
+interface props {
   link: string;
   text: string;
   image: React.ReactNode;
 }
 
-export default function ContactCard({ link, image, text }: ContactProps) {
+export default function ContactCard({ link, image, text }: props) {
   return (
     <>
       <a href={link}>

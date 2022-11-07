@@ -6,6 +6,7 @@ import ResumeItem from './ResumeItem';
 interface props {
   setMenu: Function;
 }
+
 function NavMenu({ setMenu }: props) {
   return (
     <>

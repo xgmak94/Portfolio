@@ -3,13 +3,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 
-interface navProps {
+interface props {
   link: string;
   text: string;
   setMenu: Function;
 }
 
-export default function NavItem({ link, text, setMenu }: navProps) {
+export default function NavItem({ link, text, setMenu }: props) {
   const router = useRouter();
 
   return (

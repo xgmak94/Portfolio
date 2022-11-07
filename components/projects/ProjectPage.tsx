@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import ProjectSection from './ProjectSection';
 
-interface projectProps {
+interface props {
   name: string;
   link: string;
   overview: string;
@@ -10,13 +10,13 @@ interface projectProps {
   objectives: React.ReactNode;
 }
 
-export default function ProjectPage({ name, link, overview, tools, objectives }: projectProps) {
+export default function ProjectPage({ name, link, overview, tools, objectives }: props) {
   return (
     <>
       <div className="m-3">
         <div className="flex space-around justify-center items-center gap-3">
-          <button className="text-xl bg-gray-500 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded-xl p-2">
-            <a href={link}>Github</a>
+          <button className="text-xl bg-gray-500 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded-xl p-2 capitalize">
+            <a href={link}>github</a>
           </button>
           <div className="text-4xl">{name}</div>
         </div>

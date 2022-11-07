@@ -12,7 +12,7 @@ export default function Navbar() {
 
   return (
     <motion.nav
-      className="p-3 text-black dark:text-white bg-gray-500 dark:bg-gray-700 border-b border-white dark:border-black"
+      className="text-black dark:text-white bg-gray-500 dark:bg-gray-700 border-b border-white dark:border-black sm:p-1 md:p-2"
       initial={{
         y: -500,
       }}
@@ -33,6 +33,7 @@ export default function Navbar() {
         <button
           className="flex md:hidden hover:bg-gray-300 dark:hover:bg-gray-600 rounded-xl text-lg p-2 text-center self-center"
           onClick={() => setMenu((prev) => !prev)}
+          aria-label="menu"
         >
           {menu ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
         </button>
@@ -41,7 +42,7 @@ export default function Navbar() {
       <AnimatePresence mode="wait">
         {menu ? (
           <motion.div
-            className="flex flex-col gap-3 border-t border-white dark:border-black"
+            className="flex flex-col border-t border-white dark:border-black p-3"
             initial={{
               y: -500,
             }}

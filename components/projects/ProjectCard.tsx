@@ -4,12 +4,12 @@ import Link from 'next/link';
 
 import { motion } from 'framer-motion';
 
-interface pageProps {
+interface props {
   title: string;
   description: string;
 }
 
-export default function Card({ title, description }: pageProps) {
+export default function Card({ title, description }: props) {
   const joined = title.split(' ').join('');
 
   return (
@@ -26,18 +26,16 @@ export default function Card({ title, description }: pageProps) {
           />
         </motion.div>
       </Link>
-      <div className="flex flex-col border-t border-black dark:border-white">
-        <div className="text-xl">{title}</div>
-        <div className="m-3 text-left text-lg overflow-clip h-40">{description}</div>
-        <Link href={`/projects/${joined}`}>
-          <motion.button
-            className="border m-3 rounded-xl text-lg p-3 hover:bg-gray-300 dark:hover:bg-gray-600 justify-end"
-            whileHover={{ scale: 1.05 }}
-          >
-            Read more
-          </motion.button>
-        </Link>
-      </div>
+      <div className="text-xl">{title}</div>
+      <div className="m-3 text-left text-lg overflow-clip h-40">{description}</div>
+      <Link href={`/projects/${joined}`}>
+        <motion.button
+          className="border m-3 rounded-xl text-lg p-3 hover:bg-gray-300 dark:hover:bg-gray-600 justify-end capitalize"
+          whileHover={{ scale: 1.05 }}
+        >
+          read more
+        </motion.button>
+      </Link>
     </div>
   );
 }
