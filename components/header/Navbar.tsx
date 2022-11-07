@@ -12,7 +12,7 @@ export default function Navbar() {
 
   return (
     <motion.nav
-      className="text-black dark:text-white bg-gray-500 dark:bg-gray-700 border-b border-white dark:border-black sm:p-1 md:p-2"
+      className="text-black dark:text-white bg-gray-500 dark:bg-gray-700 border-b border-white dark:border-black p-2"
       initial={{
         y: -500,
       }}
@@ -44,16 +44,16 @@ export default function Navbar() {
           <motion.div
             className="flex flex-col border-t border-white dark:border-black p-3"
             initial={{
-              y: -500,
+              x: -500,
             }}
             animate={{
-              y: 0,
+              x: 0,
             }}
             exit={{
-              y: -500,
+              y: -300,
             }}
             transition={{
-              duration: 1,
+              duration: 2,
             }}
           >
             <NavMenu setMenu={setMenu} />

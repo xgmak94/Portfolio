@@ -40,6 +40,7 @@ export default function Comments() {
 
   return (
     <>
+      <div></div>
       {submitted ? (
         <div className="text-4xl text-semibold">Thanks for the comment!</div>
       ) : (
