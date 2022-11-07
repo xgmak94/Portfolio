@@ -15,6 +15,11 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>Gary Mak</title>
+        <meta charSet="UTF-8" />
+        <meta name="description" content="Portfolio" />
+        <meta name="keywords" content="HTML, CSS, JavaScript" />
+        <meta name="author" content="Gary Mak" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <ThemeProvider attribute="class">
         <Navbar />
