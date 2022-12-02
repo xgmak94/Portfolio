@@ -6,7 +6,7 @@ export default function ProjectsPage() {
   return (
     <>
       <motion.div
-        className="flex flex-col text-center justify-center m-5"
+        className="flex flex-col text-center justify-center p-3"
         initial={{
           y: 500,
         }}

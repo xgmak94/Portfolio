@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 
 interface props {
-  link: string;
-  text: string;
+  link: String;
+  text: String;
   setMenu: Function;
 }
 
@@ -14,11 +14,11 @@ export default function NavItem({ link, text, setMenu }: props) {
 
   return (
     <motion.button
-      className="hover:bg-gray-300 dark:hover:bg-gray-600 rounded-lg text-xl p-2 capitalize"
+      className="hover:bg-teal-500 dark:hover:bg-gray-600 rounded-lg text-xl p-2 capitalize"
       whileHover={{ scale: 1.05 }}
       onClick={() => {
         setMenu(false);
-        router.push(link);
+        router.push(link as string);
       }}
     >
       {text}

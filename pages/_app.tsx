@@ -5,7 +5,7 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
-import Navbar from '../components/header/Navbar';
+import Navbar from '../components/nav/Navbar';
 import { ThemeProvider } from 'next-themes';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -26,7 +26,9 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <Navbar />
         <AnimatePresence mode="wait">
           <motion.div
-            className="text-black dark:text-white"
+            className="text-black dark:text-white bg-gradient-to-tr
+            from-red-200 via-gray-200 to-blue-500
+            dark:from-gray-400 dark:via-gray-600 dark:to-blue-900"
             key={router.route}
             initial="initialState"
             animate="animateState"

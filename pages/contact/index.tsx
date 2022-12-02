@@ -4,11 +4,11 @@ import Comments from '../../components/contacts/Comments';
 import Contacts from '../../components/contacts/Contacts';
 import { motion } from 'framer-motion';
 
-function Contact() {
+export default function Contact() {
   return (
     <>
       <motion.div
-        className="m-5"
+        className="p-3"
         initial={{
           x: -500,
         }}
@@ -38,5 +38,3 @@ function Contact() {
     </>
   );
 }
-
-export default Contact;

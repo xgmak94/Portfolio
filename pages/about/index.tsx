@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import React from 'react';
 
 import AboutInfo from '../../components/about/AboutInfo';
@@ -5,9 +6,20 @@ import Portrait from '../../components/portrait/Portrait';
 
 export default function About() {
   return (
-    <div className="m-5">
+    <motion.div
+      className="p-3"
+      initial={{
+        x: -500,
+      }}
+      animate={{
+        x: 0,
+      }}
+      transition={{
+        duration: 2,
+      }}
+    >
       <Portrait />
       <AboutInfo />
-    </div>
+    </motion.div>
   );
 }

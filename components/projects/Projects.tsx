@@ -4,8 +4,12 @@ import ProjectCard from './ProjectCard';
 export default function Projects() {
   return (
     <>
-      <div className="flex justify-start text-4xl m-3">Projects</div>
-      <div className="self-center container grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 text-black dark:text-white">
+      <div className="flex justify-start text-4xl p-3">Projects</div>
+      <div className="gap-3 grid md:grid-cols-2 sm:grid-cols-1 text-black dark:text-white">
+        <ProjectCard
+          title="Movie Board"
+          description="A movie board to look for and keep track of various movies that peak your interest."
+        />
         <ProjectCard
           title="Lucky Larrys"
           description="A web application allowing users to play and simulate the outcomes of various casino games."

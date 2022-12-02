@@ -6,13 +6,14 @@ import ModeToggle from './ModeToggle';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import NavMenu from './NavMenu';
 import { AnimatePresence, motion } from 'framer-motion';
+import NavLinks from './NavLinks';
 
 export default function Navbar() {
-  const [menu, setMenu] = useState(false);
+  const [menu, setMenu] = useState<Boolean>(false);
 
   return (
     <motion.nav
-      className="text-black dark:text-white bg-gray-500 dark:bg-gray-700 border-b border-white dark:border-black p-2"
+      className="text-black dark:text-white bg-cyan-200 dark:bg-neutral-700 border-b border-white dark:border-black p-2"
       initial={{
         y: -500,
       }}
@@ -28,10 +29,10 @@ export default function Navbar() {
           <NavItem link="/" text="home" setMenu={setMenu} />
         </div>
         <div className="hidden md:flex gap-3">
-          <NavMenu setMenu={setMenu} />
+          <NavLinks setMenu={setMenu} />
         </div>
         <button
-          className="flex md:hidden hover:bg-gray-300 dark:hover:bg-gray-600 rounded-xl text-lg p-2 text-center self-center"
+          className="flex md:hidden hover:bg-teal-300 dark:hover:bg-gray-600 rounded-xl text-lg p-2 text-center self-center"
           onClick={() => setMenu((prev) => !prev)}
           aria-label="menu"
         >
@@ -56,7 +57,7 @@ export default function Navbar() {
               duration: 2,
             }}
           >
-            <NavMenu setMenu={setMenu} />
+            <NavMenu menu={menu} setMenu={setMenu} />
           </motion.div>
         ) : null}
       </AnimatePresence>
