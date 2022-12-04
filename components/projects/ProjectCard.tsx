@@ -32,7 +32,7 @@ export default function Card({ title, description }: props) {
       <div className="p-1">
         <Link href={`/projects/${joined}`}>
           <Button
-            variant="outlined"
+            variant="contained"
             className="border p-3 rounded-xl font-semibold text-black dark:text-white hover:scale-105
               bg-blue-300 dark:bg-blue-700
               hover:bg-gray-300 dark:hover:bg-gray-600 justify-end capitalize"
