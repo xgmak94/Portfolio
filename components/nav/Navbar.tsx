@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 
 import NavItem from './NavItem';
 import ModeToggle from './ModeToggle';
-
-import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import NavMenu from './NavMenu';
-import { AnimatePresence, motion } from 'framer-motion';
 import NavLinks from './NavLinks';
+
+import { motion } from 'framer-motion';
+
+import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
+import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 
 export default function Navbar() {
   const [menu, setMenu] = useState<Boolean>(false);
@@ -38,7 +40,7 @@ export default function Navbar() {
           onClick={() => setMenu((prev) => !prev)}
           aria-label="menu"
         >
-          {menu ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
+          {menu ? <DarkModeOutlinedIcon /> : <LightModeOutlinedIcon />}
         </button>
         <ModeToggle />
       </div>
