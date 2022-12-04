@@ -6,36 +6,49 @@ import { Button } from '@mui/material';
 interface props {
   name: String;
   link: String;
-  overview: String;
-  tools: String;
+  overview: React.ReactNode;
+  tools: React.ReactNode;
   objectives: React.ReactNode;
+  deployed?: String;
 }
 
-export default function ProjectPage({ name, link, overview, tools, objectives }: props) {
+export default function ProjectPage({ name, link, overview, tools, objectives, deployed }: props) {
   return (
     <>
-      <div className="p-3">
+      <div className="min-h-screen p-3">
         <div className="flex space-around justify-center items-center gap-3">
-          <Button
-            variant="contained"
-            className="bg-blue-300 dark:bg-blue-700 hover:bg-gray-300 dark:hover:bg-gray-600"
-          >
-            <a href={link as string}>github</a>
-          </Button>
+          {deployed && (
+            <a href={deployed as string}>
+              <Button
+                variant="contained"
+                className="text-black dark:text-white bg-blue-300 dark:bg-blue-700 hover:bg-gray-300 dark:hover:bg-gray-600"
+              >
+                Deployed
+              </Button>
+            </a>
+          )}
+          <a href={link as string}>
+            <Button
+              variant="contained"
+              className="text-black dark:text-white bg-blue-300 dark:bg-blue-700 hover:bg-gray-300 dark:hover:bg-gray-600"
+            >
+              github
+            </Button>
+          </a>
           <div className="text-4xl">{name}</div>
         </div>
-        <div className="m-3 grid grid-cols-1 md:grid-cols-2 gap-1 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-1 items-start">
           <ProjectSection title="overview" text={overview} />
           <ProjectSection
             text={
-              <Image
-                className="object-contain w-auto h-auto"
-                src={`/assets/${name}/Overview.jpg`}
-                alt="overview"
-                width="100"
-                height="100"
-                layout="responsive"
-              />
+              <div className="h-64 w-96 relative">
+                <Image
+                  className="object-contain w-auto h-auto"
+                  src={`/assets/${name}/Overview.jpg`}
+                  alt="overview"
+                  layout="fill"
+                />
+              </div>
             }
           />
           <ProjectSection title="objectives" text={objectives} />

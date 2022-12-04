@@ -7,7 +7,7 @@ import Portrait from '../../components/portrait/Portrait';
 export default function About() {
   return (
     <motion.div
-      className="p-3"
+      className="min-h-screen p-3"
       initial={{
         x: -500,
       }}

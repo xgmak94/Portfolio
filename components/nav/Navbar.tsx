@@ -13,7 +13,9 @@ export default function Navbar() {
 
   return (
     <motion.nav
-      className="text-black dark:text-white bg-cyan-200 dark:bg-neutral-700 border-b border-white dark:border-black p-2"
+      className="text-black dark:text-white border-b border-white dark:border-black p-2
+      bg-gradient-to-r from-blue-400 to-emerald-400
+      dark:bg-gradient-to-l dark:from-gray-900 dark:to-gray-600"
       initial={{
         y: -500,
       }}
@@ -40,27 +42,7 @@ export default function Navbar() {
         </button>
         <ModeToggle />
       </div>
-      <AnimatePresence mode="wait">
-        {menu ? (
-          <motion.div
-            className="flex flex-col border-t border-white dark:border-black p-3"
-            initial={{
-              x: -500,
-            }}
-            animate={{
-              x: 0,
-            }}
-            exit={{
-              y: -300,
-            }}
-            transition={{
-              duration: 2,
-            }}
-          >
-            <NavMenu menu={menu} setMenu={setMenu} />
-          </motion.div>
-        ) : null}
-      </AnimatePresence>
+      {menu ? <NavMenu menu={menu} setMenu={setMenu} /> : null}
     </motion.nav>
   );
 }

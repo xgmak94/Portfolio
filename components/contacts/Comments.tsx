@@ -39,8 +39,7 @@ export default function Comments() {
   }
 
   return (
-    <>
-      <div></div>
+    <div className="flex justify-center text-center m-3">
       {submitted ? (
         <div className="text-4xl text-semibold">Thanks for the comment!</div>
       ) : (
@@ -81,7 +80,7 @@ export default function Comments() {
               />
             </div>
             <motion.button
-              className="self-center text-4xl p-3 border rounded-xl text-black dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600"
+              className="text-xl p-5 border rounded-xl text-black dark:text-white bg-blue-300 dark:bg-blue-700 hover:bg-gray-300 dark:hover:bg-gray-600"
               whileHover={{ scale: 1.1 }}
               type="submit"
             >
@@ -90,6 +89,6 @@ export default function Comments() {
           </form>
         </div>
       )}
-    </>
+    </div>
   );
 }

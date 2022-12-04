@@ -13,7 +13,7 @@ export default function ContactCard({ link, image, text }: props) {
     <>
       <a href={link as string}>
         <motion.div
-          className="p-3 border rounded-xl hover:text-gray-200 hover:dark:text-gray-400"
+          className="p-3 border rounded-xl hover:text-neutral-500"
           whileHover={{ scale: 1.05 }}
         >
           {image}

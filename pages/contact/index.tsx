@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 export default function Contact() {
   return (
-    <>
+    <div className="min-h-screen">
       <motion.div
         className="p-3"
         initial={{
@@ -22,7 +22,7 @@ export default function Contact() {
         <Contacts />
       </motion.div>
       <motion.div
-        className="flex justify-center text-center m-3"
+        className="p-3"
         initial={{
           y: 500,
         }}
@@ -35,6 +35,6 @@ export default function Contact() {
       >
         <Comments />
       </motion.div>
-    </>
+    </div>
   );
 }
