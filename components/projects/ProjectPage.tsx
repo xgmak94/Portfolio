@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import ProjectSection from './ProjectSection';
-import { Button } from '@mui/material';
 
 interface props {
   name: String;
@@ -19,21 +18,15 @@ export default function ProjectPage({ name, link, overview, tools, objectives, d
         <div className="flex space-around justify-center items-center gap-3">
           {deployed && (
             <a href={deployed as string}>
-              <Button
-                variant="contained"
-                className="text-black dark:text-white bg-blue-300 dark:bg-blue-700 hover:bg-gray-300 dark:hover:bg-gray-600"
-              >
+              <button className="rounded-lg text-xl p-2 capitalize font-semibold text-black dark:text-white hover:scale-105 bg-blue-300 dark:bg-blue-700 hover:bg-gray-300 dark:hover:bg-gray-600">
                 Deployed
-              </Button>
+              </button>
             </a>
           )}
           <a href={link as string}>
-            <Button
-              variant="contained"
-              className="text-black dark:text-white bg-blue-300 dark:bg-blue-700 hover:bg-gray-300 dark:hover:bg-gray-600"
-            >
-              github
-            </Button>
+            <button className="rounded-lg text-xl p-2 capitalize font-semibold text-black dark:text-white hover:scale-105 bg-blue-300 dark:bg-blue-700 hover:bg-gray-300 dark:hover:bg-gray-600">
+              GitHub
+            </button>
           </a>
           <div className="text-4xl">{name}</div>
         </div>

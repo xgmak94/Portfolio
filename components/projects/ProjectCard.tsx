@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { motion } from 'framer-motion';
-import { Button, Divider } from '@mui/material';
+import { Divider } from '@mui/material';
 
 interface props {
   title: String;
@@ -31,14 +31,9 @@ export default function Card({ title, description }: props) {
       <Divider className="bg-white dark:bg-black" />
       <div className="p-1">
         <Link href={`/projects/${joined}`}>
-          <Button
-            variant="contained"
-            className="border p-3 rounded-xl font-semibold text-black dark:text-white hover:scale-105
-              bg-blue-300 dark:bg-blue-700
-              hover:bg-gray-300 dark:hover:bg-gray-600 justify-end capitalize"
-          >
+          <button className="rounded-lg text-xl p-2 capitalize font-semibold text-black dark:text-white hover:scale-105 bg-blue-300 dark:bg-blue-700 hover:bg-gray-300 dark:hover:bg-gray-600">
             Read More
-          </Button>
+          </button>
         </Link>
       </div>
     </div>
