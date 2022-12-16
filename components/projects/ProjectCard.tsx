@@ -23,7 +23,7 @@ export default function Card({ title, description }: props) {
       transition={{ duration: 1 }}
       whileInView={{ opacity: 1, x: 0 }}
     >
-      <motion.div className="h-72 relative cursor-pointer" whileHover={{ scale: 1.05 }}>
+      <motion.div className="h-60 relative cursor-pointer" whileHover={{ scale: 1.05 }}>
         <Link href={`/projects/${joined}`}>
           <Image
             className="object-contain w-auto h-auto rounded-xl"
@@ -35,11 +35,13 @@ export default function Card({ title, description }: props) {
       </motion.div>
       <Divider className="border bg-black dark:bg-white" />
       <div className="p-1 text-2xl font-bold">{title}</div>
-      <div className="p-1 text-left text-lg overflow-clip h-40">{description}</div>
+      <div className="p-1 text-left text-lg h-28">{description}</div>
       <Divider className="border bg-black dark:bg-white" />
       <div className="p-1">
         <Link href={`/projects/${joined}`}>
-          <button className="rounded-lg text-xl p-2 capitalize font-semibold text-black dark:text-white hover:scale-105 bg-blue-300 dark:bg-blue-700 hover:bg-gray-300 dark:hover:bg-gray-600">
+          <button className="rounded-lg text-xl p-2 capitalize font-semibold hover:scale-105 border border-blue-800
+          text-black dark:text-white
+          bg-blue-300 dark:bg-blue-700 hover:bg-gray-300 dark:hover:bg-gray-600">
             Read More
           </button>
         </Link>

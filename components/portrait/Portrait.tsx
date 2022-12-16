@@ -7,15 +7,14 @@ export default function Portrait() {
   return (
     <div className="flex justify-center text-center">
       <motion.div
-        className=""
         initial={{
           opacity: 0,
         }}
-        animate={{
-          opacity: 1,
-        }}
         transition={{
           duration: 2,
+        }}
+        whileInView={{
+          opacity: 1,
         }}
       >
         <Image

@@ -15,17 +15,20 @@ export default function Navbar() {
 
   return (
     <motion.nav
-      className="text-black dark:text-white border-b-2 border-black dark:border-white p-2
+      className="text-black dark:text-white border-b-2
+      border-black dark:border-white p-2
       bg-gradient-to-r from-blue-400 to-emerald-400
       dark:bg-gradient-to-l dark:from-gray-900 dark:to-gray-600"
       initial={{
-        y: -500,
-      }}
-      animate={{
-        y: 0,
+        x: 500,
+        opacity: 0,
       }}
       transition={{
         duration: 2,
+      }}
+      whileInView={{
+        x: 0,
+        opacity: 1,
       }}
     >
       <div className="flex flex-row justify-between items-center gap-3">

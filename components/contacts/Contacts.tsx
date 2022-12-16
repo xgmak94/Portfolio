@@ -11,17 +11,17 @@ export default function Contacts() {
       <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-3">
         <ContactCard
           link="mailto:xgmak94@gmail.com"
-          image={<EmailIcon fontSize='large' />}
+          image={<EmailIcon fontSize="large" />}
           text="xgmak94@gmail.com"
         />
         <ContactCard
           link="https://github.com/xgmak94"
-          image={<GitHubIcon fontSize='large' />}
+          image={<GitHubIcon fontSize="large" />}
           text="xgmak94"
         />
         <ContactCard
           link="https://linkedin.com/in/makgary"
-          image={<LinkedInIcon fontSize='large' />}
+          image={<LinkedInIcon fontSize="large" />}
           text="makgary"
         />
       </div>

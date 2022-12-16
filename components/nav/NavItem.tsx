@@ -14,7 +14,8 @@ export default function NavItem({ link, text, setMenu }: props) {
 
   return (
     <motion.button
-      className="hover:bg-teal-500 dark:hover:bg-gray-600 rounded-lg text-xl p-2 capitalize"
+      className="rounded-lg text-xl p-2 capitalize
+      hover:bg-teal-500 dark:hover:bg-gray-600"
       whileHover={{ scale: 1.05 }}
       onClick={() => {
         setMenu(false);

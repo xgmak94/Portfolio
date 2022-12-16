@@ -89,7 +89,7 @@ export default function Comments() {
             </div>
             <motion.button
               className="text-xl p-5 border rounded-xl text-black dark:text-white bg-blue-300 dark:bg-blue-700 hover:bg-gray-300 dark:hover:bg-gray-600"
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.05 }}
               type="submit"
             >
               Comment

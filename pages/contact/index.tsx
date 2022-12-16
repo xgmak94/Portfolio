@@ -10,7 +10,7 @@ export default function Contact() {
       <motion.div
         className="p-3"
         initial={{
-          x: -500,
+          x: 500,
         }}
         animate={{
           x: 0,

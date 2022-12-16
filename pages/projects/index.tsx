@@ -7,15 +7,6 @@ export default function ProjectsPage() {
     <>
       <motion.div
         className="min-h-screen flex flex-col text-center justify-center p-3"
-        initial={{
-          y: 500,
-        }}
-        animate={{
-          y: 0,
-        }}
-        transition={{
-          duration: 2,
-        }}
       >
         <Projects />
       </motion.div>

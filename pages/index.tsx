@@ -1,10 +1,9 @@
 import React from 'react';
 
 import Portrait from '../components/portrait/Portrait';
-import Projects from './projects/index';
+import Projects from './projects/';
 import Typewriter from '../components/home/Typewriter';
 import { Divider } from '@mui/material';
-import About from './about';
 import Contact from './contact';
 
 export default function Home() {
