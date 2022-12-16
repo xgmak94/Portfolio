@@ -13,7 +13,13 @@ export default function ContactCard({ link, image, text }: props) {
     <>
       <a href={link as string}>
         <motion.div
-          className="flex items-center gap-3 p-3 border rounded-xl hover:text-neutral-500"
+          className="flex items-center gap-3 p-3 border border-black dark:border-white rounded-xl hover:text-neutral-400 dark:hover:text-neutral-800"
+          initial={{
+            x: 200,
+            opacity: 0,
+          }}
+          transition={{ duration: 1 }}
+          whileInView={{ opacity: 1, x: 0 }}
           whileHover={{ scale: 1.05 }}
         >
           {image}

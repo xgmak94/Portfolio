@@ -39,7 +39,15 @@ export default function Comments() {
   }
 
   return (
-    <div className="flex justify-center text-center m-3">
+    <motion.div
+      className="flex justify-center text-center m-3"
+      initial={{
+        x: 200,
+        opacity: 0,
+      }}
+      transition={{ duration: 1 }}
+      whileInView={{ opacity: 1, x: 0 }}
+    >
       {submitted ? (
         <div className="text-4xl text-semibold">Thanks for the comment!</div>
       ) : (
@@ -89,6 +97,6 @@ export default function Comments() {
           </form>
         </div>
       )}
-    </div>
+    </motion.div>
   );
 }
