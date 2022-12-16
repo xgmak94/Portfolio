@@ -7,15 +7,15 @@ import NavLinks from './NavLinks';
 
 import { motion } from 'framer-motion';
 
-import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
-import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
+import CloseIcon from '@mui/icons-material/Close';
+import MenuIcon from '@mui/icons-material/Menu';
 
 export default function Navbar() {
   const [menu, setMenu] = useState<Boolean>(false);
 
   return (
     <motion.nav
-      className="text-black dark:text-white border-b border-white dark:border-black p-2
+      className="text-black dark:text-white border-b-2 border-black dark:border-white p-2
       bg-gradient-to-r from-blue-400 to-emerald-400
       dark:bg-gradient-to-l dark:from-gray-900 dark:to-gray-600"
       initial={{
@@ -40,7 +40,7 @@ export default function Navbar() {
           onClick={() => setMenu((prev) => !prev)}
           aria-label="menu"
         >
-          {menu ? <DarkModeOutlinedIcon /> : <LightModeOutlinedIcon />}
+          {menu ? <CloseIcon /> : <MenuIcon />}
         </button>
         <ModeToggle />
       </div>

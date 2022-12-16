@@ -13,10 +13,10 @@ export default function Home() {
       <div className="p-3">
         <Portrait />
         <Typewriter />
-        <Divider />
+        <Divider className="border bg-black dark:bg-white" />
         <Projects />
-        <Divider />
-        <Contact/>
+        <Divider className="border bg-black dark:bg-white" />
+        <Contact />
       </div>
     </>
   );

@@ -15,7 +15,7 @@ export default function Card({ title, description }: props) {
 
   return (
     <motion.div
-      className="flex flex-col gap-1 text-center rounded-3xl border border-black dark:border-white"
+      className="flex flex-col gap-1 text-center rounded-3xl border-2 border-black dark:border-white"
       initial={{
         x: 200,
         opacity: 0,
@@ -33,10 +33,10 @@ export default function Card({ title, description }: props) {
           />
         </Link>
       </motion.div>
-      <Divider className="bg-black dark:bg-white" />
+      <Divider className="border bg-black dark:bg-white" />
       <div className="p-1 text-2xl font-bold">{title}</div>
       <div className="p-1 text-left text-lg overflow-clip h-40">{description}</div>
-      <Divider className="bg-black dark:bg-white" />
+      <Divider className="border bg-black dark:bg-white" />
       <div className="p-1">
         <Link href={`/projects/${joined}`}>
           <button className="rounded-lg text-xl p-2 capitalize font-semibold text-black dark:text-white hover:scale-105 bg-blue-300 dark:bg-blue-700 hover:bg-gray-300 dark:hover:bg-gray-600">

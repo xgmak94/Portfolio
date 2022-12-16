@@ -5,7 +5,7 @@ export default function Projects() {
   return (
     <>
       <div className="flex justify-start text-4xl p-3">Projects</div>
-      <div className="gap-3 grid md:grid-cols-2 sm:grid-cols-1 text-black dark:text-white">
+      <div className="gap-3 grid lg:grid-cols-2 sm:grid-cols-1 text-black dark:text-white">
         <ProjectCard
           title="Movie Board"
           description="A movie board to look for and keep track of various movies that peak your interest."
