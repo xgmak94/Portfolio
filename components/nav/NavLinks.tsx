@@ -5,9 +5,9 @@ import NavItem from './NavItem';
 
 interface Props {
   setMenu: React.Dispatch<React.SetStateAction<Boolean>>;
-};
+}
 
-export default function NavLinks({setMenu}: Props) {
+export default function NavLinks({ setMenu }: Props) {
   return (
     <>
       <NavItem link="/projects" text="projects" setMenu={setMenu} />
@@ -15,7 +15,7 @@ export default function NavLinks({setMenu}: Props) {
       <NavItem link="/contact" text="contact" setMenu={setMenu} />
       <Link href="/resume.pdf" locale={false} rel="noopener noreferrer">
         <motion.button
-          className="hover:bg-teal-500 dark:hover:bg-gray-600 rounded-xl text-xl p-2 capitalize"
+          className="rounded-xl p-2 text-xl capitalize hover:bg-teal-500 dark:hover:bg-gray-600"
           whileHover={{ scale: 1.05 }}
         >
           resume

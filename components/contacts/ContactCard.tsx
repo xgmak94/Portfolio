@@ -13,7 +13,7 @@ export default function ContactCard({ link, image, text }: props) {
     <>
       <a href={link as string}>
         <motion.div
-          className="flex items-center gap-3 p-3 border-2 border-black dark:border-white rounded-xl hover:text-neutral-400 dark:hover:text-neutral-800"
+          className="flex items-center gap-3 rounded-xl border-2 border-black p-3 hover:text-neutral-400 dark:border-white dark:hover:text-neutral-800"
           initial={{
             x: 200,
             opacity: 0,

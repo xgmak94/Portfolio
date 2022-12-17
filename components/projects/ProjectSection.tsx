@@ -8,8 +8,8 @@ interface props {
 
 export default function ProjectSection({ title, text }: props) {
   return (
-    <div className="p-1 flex flex-col">
-      <div className="text-3xl self-center capitalize">{title}</div>
+    <div className="flex flex-col p-1">
+      <div className="self-center text-3xl capitalize">{title}</div>
       {title ? <Divider className="bg-black dark:bg-white" /> : null}
       <div className="text-lg">{text}</div>
     </div>

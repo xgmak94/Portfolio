@@ -33,8 +33,8 @@ const projects: Project[] = [
 export default function Projects() {
   return (
     <>
-      <div className="flex justify-start text-4xl p-3">Projects</div>
-      <div className="gap-3 grid lg:grid-cols-2 sm:grid-cols-1 text-black dark:text-white">
+      <div className="flex justify-start p-3 text-4xl">Projects</div>
+      <div className="grid gap-3 text-black dark:text-white sm:grid-cols-1 lg:grid-cols-2">
         {projects.map((project) => (
           <ProjectCard
             key={project.title as Key}

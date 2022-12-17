@@ -15,31 +15,29 @@ export default function Navbar() {
 
   return (
     <motion.nav
-      className="text-black dark:text-white border-b-2
-      border-black dark:border-white p-2
-      bg-gradient-to-r from-blue-400 to-emerald-400
-      dark:bg-gradient-to-l dark:from-gray-900 dark:to-gray-600"
+      className="border-b-2 border-black bg-gradient-to-r from-blue-400
+      to-emerald-400 p-2
+      text-black dark:border-white dark:bg-gradient-to-l
+      dark:from-gray-900 dark:to-gray-600 dark:text-white"
       initial={{
-        x: 500,
         opacity: 0,
       }}
       transition={{
         duration: 2,
       }}
       whileInView={{
-        x: 0,
         opacity: 1,
       }}
     >
-      <div className="flex flex-row justify-between items-center gap-3">
+      <div className="flex flex-row items-center justify-between gap-3">
         <div className="container flex gap-3">
           <NavItem link="/" text="home" setMenu={setMenu} />
         </div>
-        <div className="hidden md:flex gap-3">
+        <div className="hidden gap-3 md:flex">
           <NavLinks setMenu={setMenu} />
         </div>
         <button
-          className="flex md:hidden hover:bg-teal-300 dark:hover:bg-gray-600 rounded-xl text-lg p-2 text-center self-center"
+          className="flex self-center rounded-xl p-2 text-center text-lg hover:bg-teal-300 dark:hover:bg-gray-600 md:hidden"
           onClick={() => setMenu((prev) => !prev)}
           aria-label="menu"
         >

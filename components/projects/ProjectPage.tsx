@@ -11,32 +11,39 @@ interface props {
   deployed?: String;
 }
 
-export default function ProjectPage({ name, link, overview, tools, objectives, deployed }: props) {
+export default function ProjectPage({
+  name,
+  link,
+  overview,
+  tools,
+  objectives,
+  deployed,
+}: props) {
   return (
     <>
       <div className="min-h-screen p-3">
-        <div className="flex space-around justify-center items-center gap-3">
+        <div className="space-around flex items-center justify-center gap-3">
           {deployed && (
             <a href={deployed as string}>
-              <button className="rounded-lg text-xl p-2 capitalize font-semibold text-black dark:text-white hover:scale-105 bg-blue-300 dark:bg-blue-700 hover:bg-gray-300 dark:hover:bg-gray-600">
+              <button className="rounded-lg bg-blue-300 p-2 text-xl font-semibold capitalize text-black hover:scale-105 hover:bg-gray-300 dark:bg-blue-700 dark:text-white dark:hover:bg-gray-600">
                 Deployed
               </button>
             </a>
           )}
           <a href={link as string}>
-            <button className="rounded-lg text-xl p-2 capitalize font-semibold text-black dark:text-white hover:scale-105 bg-blue-300 dark:bg-blue-700 hover:bg-gray-300 dark:hover:bg-gray-600">
+            <button className="rounded-lg bg-blue-300 p-2 text-xl font-semibold capitalize text-black hover:scale-105 hover:bg-gray-300 dark:bg-blue-700 dark:text-white dark:hover:bg-gray-600">
               GitHub
             </button>
           </a>
           <div className="text-4xl">{name}</div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-1 items-start">
+        <div className="grid grid-cols-1 items-start gap-1 md:grid-cols-2">
           <ProjectSection title="overview" text={overview} />
           <ProjectSection
             text={
-              <div className="h-64 w-96 relative">
+              <div className="relative h-64 w-96">
                 <Image
-                  className="object-contain w-auto h-auto"
+                  className="h-auto w-auto object-contain"
                   src={`/assets/${name}/Overview.jpg`}
                   alt="overview"
                   layout="fill"

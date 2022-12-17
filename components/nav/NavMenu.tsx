@@ -15,7 +15,7 @@ export default function NavMenu({ menu, setMenu }: props) {
       <AnimatePresence mode="wait">
         {menu ? (
           <motion.div
-            className="flex flex-col border-t border-white dark:border-black p-3"
+            className="flex flex-col border-t border-white p-3 dark:border-black"
             initial={{
               x: -500,
             }}
@@ -34,7 +34,7 @@ export default function NavMenu({ menu, setMenu }: props) {
             <NavItem link="/contact" text="contact" setMenu={setMenu} />
             <Link href="/resume.pdf" locale={false} rel="noopener noreferrer">
               <motion.button
-                className="hover:bg-teal-500 dark:hover:bg-gray-600 rounded-xl text-xl p-2 capitalize"
+                className="rounded-xl p-2 text-xl capitalize hover:bg-teal-500 dark:hover:bg-gray-600"
                 whileHover={{ scale: 1.05 }}
               >
                 resume

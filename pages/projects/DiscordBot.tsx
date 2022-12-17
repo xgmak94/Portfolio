@@ -13,14 +13,18 @@ export default function DiscordBot() {
         objectives={
           <>
             <li>Design an interactive Discord Bot.</li>
-            <li>Allow users to interact with their friends while sharing music.</li>
+            <li>
+              Allow users to interact with their friends while sharing music.
+            </li>
             <li>Have all the functionality of a normal music player.</li>
             <li>Show the top 5 results from a youtube keyword search</li>
-            <li>Additional functionality can be implemented through various other commands.</li>
+            <li>
+              Additional functionality can be implemented through various other
+              commands.
+            </li>
           </>
         }
       />
     </>
   );
 }
-

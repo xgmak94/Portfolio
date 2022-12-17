@@ -40,7 +40,7 @@ export default function Comments() {
 
   return (
     <motion.div
-      className="flex justify-center text-center m-3"
+      className="m-3 flex justify-center text-center"
       initial={{
         x: 200,
         opacity: 0,
@@ -49,12 +49,12 @@ export default function Comments() {
       whileInView={{ opacity: 1, x: 0 }}
     >
       {submitted ? (
-        <div className="text-4xl text-semibold">Thanks for the comment!</div>
+        <div className="text-semibold text-4xl">Thanks for the comment!</div>
       ) : (
         <div className="flex flex-col justify-center">
-          <div className="text-4xl text-semibold">Leave a comment!</div>
+          <div className="text-semibold text-4xl">Leave a comment!</div>
           <form className="p-5" onSubmit={submitComment}>
-            <div className="flex justify-between container p-3 gap-3">
+            <div className="container flex justify-between gap-3 p-3">
               <label htmlFor="username">Name</label>
               <motion.input
                 whileFocus={{ scale: 1.1 }}
@@ -65,7 +65,7 @@ export default function Comments() {
                 required
               />
             </div>
-            <div className="flex justify-between container p-3 gap-3">
+            <div className="container flex justify-between gap-3 p-3">
               <label htmlFor="email">Email</label>
               <motion.input
                 whileFocus={{ scale: 1.1 }}
@@ -75,7 +75,7 @@ export default function Comments() {
                 required
               />
             </div>
-            <div className="flex justify-between container p-3 gap-3">
+            <div className="container flex justify-between gap-3 p-3">
               <label htmlFor="comment">Comment</label>
               <motion.textarea
                 whileFocus={{ scale: 1.1 }}
@@ -88,7 +88,7 @@ export default function Comments() {
               />
             </div>
             <motion.button
-              className="text-xl p-5 border rounded-xl text-black dark:text-white bg-blue-300 dark:bg-blue-700 hover:bg-gray-300 dark:hover:bg-gray-600"
+              className="rounded-xl border bg-blue-300 p-5 text-xl text-black hover:bg-gray-300 dark:bg-blue-700 dark:text-white dark:hover:bg-gray-600"
               whileHover={{ scale: 1.05 }}
               type="submit"
             >

@@ -15,7 +15,7 @@ export default function Card({ title, description }: props) {
 
   return (
     <motion.div
-      className="flex flex-col gap-1 text-center rounded-3xl border-2 border-black dark:border-white"
+      className="flex flex-col gap-1 rounded-3xl border-2 border-black text-center dark:border-white"
       initial={{
         x: 200,
         opacity: 0,
@@ -23,10 +23,13 @@ export default function Card({ title, description }: props) {
       transition={{ duration: 1 }}
       whileInView={{ opacity: 1, x: 0 }}
     >
-      <motion.div className="h-60 relative cursor-pointer" whileHover={{ scale: 1.05 }}>
+      <motion.div
+        className="relative h-60 cursor-pointer"
+        whileHover={{ scale: 1.05 }}
+      >
         <Link href={`/projects/${joined}`}>
           <Image
-            className="object-contain w-auto h-auto rounded-xl"
+            className="h-auto w-auto rounded-xl object-contain"
             src={`/assets/${joined}.jpg`}
             alt="Main image"
             layout="fill"
@@ -35,13 +38,15 @@ export default function Card({ title, description }: props) {
       </motion.div>
       <Divider className="border bg-black dark:bg-white" />
       <div className="p-1 text-2xl font-bold">{title}</div>
-      <div className="p-1 text-left text-lg h-28">{description}</div>
+      <div className="h-28 p-1 text-left text-lg">{description}</div>
       <Divider className="border bg-black dark:bg-white" />
       <div className="p-1">
         <Link href={`/projects/${joined}`}>
-          <button className="rounded-lg text-xl p-2 capitalize font-semibold hover:scale-105 border border-blue-800
-          text-black dark:text-white
-          bg-blue-300 dark:bg-blue-700 hover:bg-gray-300 dark:hover:bg-gray-600">
+          <button
+            className="rounded-lg border border-blue-800 bg-blue-300 p-2 text-xl font-semibold capitalize
+          text-black hover:scale-105
+          hover:bg-gray-300 dark:bg-blue-700 dark:text-white dark:hover:bg-gray-600"
+          >
             Read More
           </button>
         </Link>

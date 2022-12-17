@@ -16,8 +16,16 @@ export default function ModeToggle() {
     <div className="flex flex-row items-center">
       <Tooltip title={theme === 'dark' ? 'Dark mode' : 'Light mode'} arrow>
         <FormControlLabel
-          control={<Switch checked={theme === 'dark'} onChange={handleToggle} />}
-          label={theme === 'dark' ? <DarkModeOutlinedIcon /> : <LightModeOutlinedIcon />}
+          control={
+            <Switch checked={theme === 'dark'} onChange={handleToggle} />
+          }
+          label={
+            theme === 'dark' ? (
+              <DarkModeOutlinedIcon />
+            ) : (
+              <LightModeOutlinedIcon />
+            )
+          }
         />
       </Tooltip>
     </div>

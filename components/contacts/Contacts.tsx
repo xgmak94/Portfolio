@@ -7,8 +7,8 @@ import ContactCard from '../../components/contacts/ContactCard';
 export default function Contacts() {
   return (
     <>
-      <div className="text-4xl mb-3">Contacts</div>
-      <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-3">
+      <div className="mb-3 text-4xl">Contacts</div>
+      <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3">
         <ContactCard
           link="mailto:xgmak94@gmail.com"
           image={<EmailIcon fontSize="large" />}

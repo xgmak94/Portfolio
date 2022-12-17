@@ -5,9 +5,7 @@ import { motion } from 'framer-motion';
 export default function ProjectsPage() {
   return (
     <>
-      <motion.div
-        className="min-h-screen flex flex-col text-center justify-center p-3"
-      >
+      <motion.div className="flex min-h-screen flex-col justify-center p-3 text-center">
         <Projects />
       </motion.div>
     </>

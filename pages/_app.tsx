@@ -26,9 +26,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <Navbar />
         <AnimatePresence mode="wait">
           <motion.div
-            className="text-black dark:text-white bg-gradient-to-tr
-            from-red-200 via-gray-200 to-blue-500
-            dark:from-gray-400 dark:via-gray-600 dark:to-blue-900"
+            className="bg-gradient-to-tr from-red-200 via-gray-200 to-blue-500 text-black dark:from-gray-400 dark:via-gray-600 dark:to-blue-900 dark:text-white"
             key={router.route}
             initial="initialState"
             animate="animateState"
@@ -45,7 +43,9 @@ export default function MyApp({ Component, pageProps }: AppProps) {
                 opacity: 1,
                 clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)',
               },
-              exitState: { clipPath: 'polygon(50% 0, 50% 0, 50% 100%, 50% 100%)' },
+              exitState: {
+                clipPath: 'polygon(50% 0, 50% 0, 50% 100%, 50% 100%)',
+              },
             }}
           >
             <Component {...pageProps} />

@@ -14,13 +14,17 @@ export default function Atelier() {
           <>
             <li>Redesign API into a microservices oriented architecture.</li>
             <li>
-              Identified various bottlenecks and constraints through testing using K6, Loader.io,
-              and New Relic.
+              Identified various bottlenecks and constraints through testing
+              using K6, Loader.io, and New Relic.
             </li>
             <li>Improved performance over the previous API.</li>
-            <li>Implement a load balancer to split up web traffic between several servers.</li>
             <li>
-              Apply caching to allow subsequent requests to be returned quickly and efficiently.
+              Implement a load balancer to split up web traffic between several
+              servers.
+            </li>
+            <li>
+              Apply caching to allow subsequent requests to be returned quickly
+              and efficiently.
             </li>
           </>
         }
