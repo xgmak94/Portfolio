@@ -27,7 +27,7 @@ export default function ProjectPage({
           {live && (
             <a href={live as string}>
               <button className="flex items-center rounded-lg bg-blue-300 p-2 text-xl font-semibold capitalize text-black hover:scale-105 hover:bg-gray-300 dark:bg-blue-700 dark:text-white dark:hover:bg-gray-600">
-                <CircleIcon className="text-sm text-[#0f0]"/>
+                <CircleIcon fontSize="small" className="text-[#0f0]"/>
                 Live
               </button>
             </a>
