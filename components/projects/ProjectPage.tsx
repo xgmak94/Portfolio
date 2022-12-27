@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import ProjectSection from './ProjectSection';
+import CircleIcon from '@mui/icons-material/Circle';
 
 interface props {
   name: String;
@@ -8,7 +9,7 @@ interface props {
   overview: React.ReactNode;
   tools: React.ReactNode;
   objectives: React.ReactNode;
-  deployed?: String;
+  live?: String;
 }
 
 export default function ProjectPage({
@@ -17,16 +18,17 @@ export default function ProjectPage({
   overview,
   tools,
   objectives,
-  deployed,
+  live,
 }: props) {
   return (
     <>
       <div className="min-h-screen p-3">
         <div className="space-around flex items-center justify-center gap-3">
-          {deployed && (
-            <a href={deployed as string}>
-              <button className="rounded-lg bg-blue-300 p-2 text-xl font-semibold capitalize text-black hover:scale-105 hover:bg-gray-300 dark:bg-blue-700 dark:text-white dark:hover:bg-gray-600">
-                Deployed
+          {live && (
+            <a href={live as string}>
+              <button className="flex items-center rounded-lg bg-blue-300 p-2 text-xl font-semibold capitalize text-black hover:scale-105 hover:bg-gray-300 dark:bg-blue-700 dark:text-white dark:hover:bg-gray-600">
+                <CircleIcon className="text-sm text-[#0f0]"/>
+                Live
               </button>
             </a>
           )}
