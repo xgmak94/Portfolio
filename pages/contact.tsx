@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Comments from '../../components/contacts/Comments';
-import Contacts from '../../components/contacts/Contacts';
+import Comments from '../components/contacts/Comments';
+import Contacts from '../components/contacts/Contacts';
 import { motion } from 'framer-motion';
 
 export default function Contact() {

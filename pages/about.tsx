@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 
-import AboutInfo from '../../components/about/AboutInfo';
-import Portrait from '../../components/portrait/Portrait';
+import AboutInfo from '../components/about/AboutInfo';
+import Portrait from '../components/portrait/Portrait';
 
 export default function About() {
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Portrait from '../components/portrait/Portrait';
-import Projects from './projects/';
+import Projects from './projects';
 import Typewriter from '../components/home/Typewriter';
 import { Divider } from '@mui/material';
 import Contact from './contact';
