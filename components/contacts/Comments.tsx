@@ -53,11 +53,10 @@ export default function Comments() {
       ) : (
         <div className="flex flex-col justify-center">
           <div className="text-semibold text-4xl">Leave a comment!</div>
-          <form className="p-5" onSubmit={submitComment}>
+          <form className="prose p-5" onSubmit={submitComment}>
             <div className="container flex justify-between gap-3 p-3">
               <label htmlFor="username">Name</label>
               <motion.input
-                whileFocus={{ scale: 1.1 }}
                 type="text"
                 id="username"
                 ref={nameRef}
@@ -68,7 +67,6 @@ export default function Comments() {
             <div className="container flex justify-between gap-3 p-3">
               <label htmlFor="email">Email</label>
               <motion.input
-                whileFocus={{ scale: 1.1 }}
                 id="email"
                 ref={emailRef}
                 className="rounded-lg"
@@ -78,7 +76,6 @@ export default function Comments() {
             <div className="container flex justify-between gap-3 p-3">
               <label htmlFor="comment">Comment</label>
               <motion.textarea
-                whileFocus={{ scale: 1.1 }}
                 id="comment"
                 ref={commentRef}
                 className="rounded-lg"

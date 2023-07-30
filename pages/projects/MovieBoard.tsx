@@ -8,7 +8,6 @@ export default function LuckyLarrys() {
       <ProjectPage
         name={'Movie Board'}
         link={'https://github.com/xgmak94/Movieban'}
-        live={'https://movieban.vercel.app/'}
         overview={
           'Created a kanban inspired board. Receives movie data from TMDB API to display information about various movies. Individual users are allowed to add these movies onto their list to keep track of any that pique their interest.'
         }

@@ -15,7 +15,7 @@ export default function Navbar() {
 
   return (
     <motion.nav
-      className="border-b-2 border-black bg-gradient-to-r from-blue-400
+      className="w-screen border-b-2 border-black bg-gradient-to-r from-blue-400
       to-emerald-400 p-2
       text-black dark:border-white dark:bg-gradient-to-l
       dark:from-gray-900 dark:to-gray-600 dark:text-white"
